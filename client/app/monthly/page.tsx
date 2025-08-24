@@ -116,17 +116,6 @@ export default function MonthlyPage() {
     <div className="min-h-screen bg-gray-900">
       {/* 主要内容 */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* 页面标题 */}
-        <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-white mb-3 flex items-center justify-center space-x-2">
-            <BarChart3 className="w-6 h-6 text-purple-400" />
-            <span>月度数据查询</span>
-          </h2>
-          <p className="text-sm text-gray-400 max-w-2xl mx-auto">
-            查询股票最近一个月的每日数据记录，全面了解股票走势和趋势变化
-          </p>
-        </div>
-
         {/* 查询表单 */}
         <Card className="mb-6 bg-gray-800/50 border-gray-700">
           <CardHeader className="pb-4">
@@ -255,7 +244,7 @@ export default function MonthlyPage() {
 
         {/* 股票数据表格 */}
         {stockData.length > 0 && (
-          <Card className="bg-gray-800/50 border-gray-700">
+          <Card className="bg-gray-800/50 border-gray-700 mb-6">
             <CardHeader>
               <CardTitle className="text-lg font-bold text-white flex items-center space-x-2">
                 <BarChart3 className="w-5 h-5 text-purple-400" />

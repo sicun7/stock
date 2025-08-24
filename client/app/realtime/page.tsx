@@ -129,17 +129,6 @@ export default function RealtimePage() {
     <div className="min-h-screen bg-gray-900">
       {/* 主要内容 */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* 页面标题 */}
-        <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-white mb-3 flex items-center justify-center space-x-2">
-            <Clock className="w-6 h-6 text-cyan-400" />
-            <span>实时分钟数据</span>
-          </h2>
-          <p className="text-sm text-gray-400 max-w-2xl mx-auto">
-            查询股票最近20分钟的分钟级实时数据，把握市场动态和价格变化
-          </p>
-        </div>
-
         {/* 查询表单 */}
         <Card className="mb-6 bg-gray-800/50 border-gray-700">
           <CardHeader className="pb-4">
@@ -297,7 +286,7 @@ export default function RealtimePage() {
 
         {/* 实时数据展示 */}
         {minuteData.length > 0 && (
-          <Card className="bg-gray-800/50 border-gray-700">
+          <Card className="bg-gray-800/50 border-gray-700 mb-6">
             <CardHeader>
               <CardTitle className="text-lg font-bold text-white flex items-center space-x-2">
                 <Clock className="w-5 h-5 text-cyan-400" />

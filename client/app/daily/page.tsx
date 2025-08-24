@@ -95,17 +95,6 @@ export default function DailyPage() {
     <div className="min-h-screen bg-gray-900">
       {/* 主要内容 */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* 页面标题 */}
-        <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-white mb-3 flex items-center justify-center space-x-2">
-            <Calendar className="w-6 h-6 text-blue-400" />
-            <span>日线数据查询</span>
-          </h2>
-          <p className="text-sm text-gray-400 max-w-2xl mx-auto">
-            根据股票代码和日期查询指定日期的股票信息，包括开盘、收盘、最高、最低等关键数据
-          </p>
-        </div>
-
         {/* 查询表单 */}
         <Card className="mb-6 bg-gray-800/50 border-gray-700">
           <CardHeader className="pb-4">
@@ -184,7 +173,7 @@ export default function DailyPage() {
 
         {/* 股票数据展示 */}
         {stockData && (
-          <div className="space-y-6">
+          <div className="space-y-6 mb-6">
             {/* 主要数据卡片 */}
             <Card className="bg-gray-800/50 border-gray-700">
               <CardHeader className="pb-4">
