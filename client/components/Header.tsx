@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { TrendingUp, Calendar, BarChart3, Clock } from 'lucide-react'
+import { TrendingUp, Calendar, BarChart3, Clock, Star } from 'lucide-react'
 
 export default function Header() {
   const pathname = usePathname()
@@ -63,6 +63,18 @@ export default function Header() {
               <Clock className="w-4 h-4" />
               <span>实时数据</span>
             </Link>
+
+            <Link 
+              href="/watchlist"
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center space-x-2 ${
+                isActive('/watchlist') 
+                  ? 'bg-yellow-600 text-white shadow-lg shadow-yellow-600/25' 
+                  : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+              }`}
+            >
+              <Star className="w-4 h-4" />
+              <span>自选</span>
+            </Link>
           </nav>
 
           {/* 右侧信息 */}
@@ -109,6 +121,18 @@ export default function Header() {
             >
               <Clock className="w-3 h-3" />
               <span>实时数据</span>
+            </Link>
+
+            <Link 
+              href="/watchlist"
+              className={`px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap transition-all duration-300 flex items-center space-x-2 ${
+                isActive('/watchlist') 
+                  ? 'bg-yellow-600 text-white shadow-lg' 
+                  : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+              }`}
+            >
+              <Star className="w-3 h-3" />
+              <span>自选</span>
             </Link>
           </div>
         </div>
